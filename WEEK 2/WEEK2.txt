@@ -1,0 +1,5 @@
+DAY 7
+Window vs.Document vs.Screen
+https://myzentask.blogspot.com/2020/06/window-vs-screen-vs-document.html
+COMMON ERROR IN JS
+https://myzentask.blogspot.com/2020/07/common-error-in-js.html
