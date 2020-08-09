@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+       body
+{
+padding:0px;
+margin:0px;
+background: #ccc;
+}
+
+.wd100
+{
+width:100%
+}
+.wd50
+{
+width:48%
+}
+.pdy{
+padding-top:5px;
+padding-bottom:5px;
+border-bottom : 2px solid #ccc;
+}
+
+.bdr
+{
+border-right : 2px solid #ccc;
+}
+.mrglr
+{
+margin-left: 15 px25px
+
+}
+.h1{
+    background-color: #e9b83f;
+    position: absolute;
+    left: 36%;
+    top: 176px;
+    width: 370px;
+    padding-top: 41px;
+    padding-bottom: 41px;
+    border-radius: 10px;
+    font-size: revert;
+}
+.container 
+{
+width:1000px;
+margin:auto;
+background: white;
+padding-left:20px;
+padding-right:20px;
+padding-bottom:60px
+margin -14px;
+}
+.header
+{
+width:1040px;
+margin:auto;
+background: white;
+margin-bottom: -13px;
+}
+
+
+
+</style>
+
+
+</head>
+<body>
+   <script>
+
+
+let resume = document.body;
+//HEADER DIV 
+let header =document.createElement('div');
+header.setAttribute("class","header")
+
+let person = document.createElement('div');
+person.setAttribute('class','wd100');
+person.setAttribute('style','height:220px;background-color:#565656;text-align: center');
+
+let personimage = document.createElement('img');
+personimage.setAttribute('src',"https://www.w3schools.com/howto/img_avatar.png");
+personimage.setAttribute('style','height:220px;background-color:#565656;text-align: center');
+
+
+let personname = document.createElement('h1');
+personname.innerText = 'BRAIN DUDEY'
+
+person.append(personimage,personname)
+
+let white =document.createElement('div');
+white.setAttribute('class','wd100');
+white.setAttribute('style',"height:60px;background-color:white");
+
+let orange =document.createElement('div');
+orange.setAttribute('class','wd100');
+orange.setAttribute('style',"height:60px;background-color:#565656");
+
+let empty =document.createElement('div');
+empty.setAttribute('style',"clear: both");
+
+
+
+header.append(person,white,orange,empty)
+
+resume.append(header)
+
+
+
+// container div
+
+let container = document.createElement("div")
+container.setAttribute("class","container")
+
+
+//addressdiv
+
+         
+let addressdiv = document.createElement('div');
+addressdiv.className=("wd100 text_center")
+
+let address = document.createElement('h2')
+address.innerText="N. Damen Avenue, Chicago 99999 | 999-999-9999|hello@Kickresume.com |www.Kickresume.com"
+address.setAttribute("class","pdy")
+address.setAttribute("style","font-size: medium;text-align:center")
+
+addressdiv.append(address)
+
+
+
+
+//margindiv
+
+let margindiv = document.createElement('div');
+margindiv.className=("wd100  mrglr")
+ //leftcolumndiv
+
+ let leftcolumndiv = document.createElement('div');
+leftcolumndiv.className=("wd50 bdr")
+leftcolumndiv.setAttribute("style",'padding-right: 24px; float:left')
+//lcd1div
+let lcd1 =document.createElement('div');
+lcd1.setAttribute("class","wd100")
+
+ //profileicon
+
+ let profileicon = document.createElement('div')
+ profileicon.setAttribute("style","display: flex;")
+
+let profileimage = document.createElement('img')
+profileimage.setAttribute("src","profile.png")
+profileimage.setAttribute("style","position: relative;left: -13px;width:85px")
+                  
+let profileheading =document.createElement('h2')
+profileheading.setAttribute("style","color:#555555; position:relative; left:-17px")
+profileheading.innerText="Profile"
+
+profileicon.append(profileimage,profileheading)
+
+//profilecont
+
+let profilecont = document.createElement("div")
+
+let profilepara = document.createElement("p")
+profilepara.innerText ="Innovative optimized solution seeker. Excited to be at the deployment phase of my new career as a web developer.I am ambitious, adventurous, assiduous, animated, and an a lliteration advocate."  
+
+profilecont.append(profilepara)
+
+//skillicon
+
+let skillicon = document.createElement('div')
+skillicon.setAttribute("style","display: flex;")
+
+let skillimage = document.createElement('img')
+skillimage.setAttribute("src","skill.png")
+skillimage.setAttribute("style","position: relative;left: -13px;width:85px;height:70px")
+                  
+let skillheading =document.createElement('h2')
+skillheading.setAttribute("style","color:#555555; position:relative; left:-17px")
+skillheading.innerText="Skills"
+
+skillicon.append(skillimage,skillheading)
+//skillcontent
+
+let skill = document.createElement('div')
+
+let skillname = document.createElement('span')
+skillname.innerText = "Javascript"
+skillname.setAttribute('style','display:inline-block;float:left;')
+
+
+let skillpercent = document.createElement('span')
+skillpercent.setAttribute('style','display:inline-block;float:right;')
+
+let skillrange = document.createElement('input')
+skillrange.setAttribute('type','range')
+skillrange.setAttribute('style',"font-size:15px;border:15px solid green")
+skillpercent.append(skillrange)
+
+skill.append(skillname,skillpercent)
+
+
+
+         
+
+//workexperience
+
+let workiconL = document.createElement('div')
+ workiconL.setAttribute("style","display: flex;")
+
+let workimage = document.createElement('img')
+workimage.setAttribute("src","12.jpg")
+workimage.setAttribute("style","width:70px;margin-top:50px;margin-left:-80px")
+                  
+let workheading =document.createElement('h2')
+workheading.setAttribute("style","color:#555555;margin-top:50px" )
+workheading.innerText="Work experience"
+
+workiconL.append(workimage,workheading)
+
+
+
+
+
+//workcont
+
+let workcont = document.createElement("div")
+
+//workconthead
+let workcontenthead = document.createElement('div')
+let workcontheadpara = document.createElement("p")
+workcontheadpara.innerText="Event Manager"
+
+workcontenthead.append(workcontheadpara)
+
+
+
+//workpara
+let workparadiv = document.createElement("div")
+
+let workparalist =document.createElement("ul")
+workparalist.setAttribute("style","padding-right:20px")
+
+let wpl1 =document.createElement('li')
+wpl1.innerText = "Lead and execute all phases of event planning and production spanning committee recruitment, training, vendor relationships and on-site facilitation."
+
+let wpl2 =document.createElement('li')
+wpl2.innerText = "Lead and execute all phases of event planning and production spanning committee recruitment, training, vendor relationships and on-site facilitation."
+                     
+let wpl3 =document.createElement('li')
+wpl3.innerText = "Lead and execute all phases of event planning and production spanning committee recruitment, training, vendor relationships and on-site facilitation."
+						
+					
+   workparalist.append(wpl1,wpl2,wpl3)		
+   workparadiv.append(workparalist)		
+
+   workcont.append(workcontenthead,workparadiv)
+
+
+
+//Right Column Div
+
+let rightcolumndiv = document.createElement('div');
+rightcolumndiv.className=("wd50")
+rightcolumndiv.setAttribute("style", "float:right")
+
+//workiconr1
+
+let workiconr1 = document.createElement('div')
+ workiconr1.setAttribute("style","display: flex;")
+
+let workimager1 = document.createElement('img')
+workimager1.setAttribute("src","12.jpg")
+workimager1.setAttribute("style","width:70px;")
+                  
+let workheadingr1 =document.createElement('h2')
+workheadingr1.setAttribute("style","color:#555555;")
+workheadingr1.innerText="Work experience"
+
+workiconr1.append(workimager1,workheadingr1)
+
+
+//workcont2
+
+let workcont2 = document.createElement("div")
+
+//workconthead2
+let workcontenthead2 = document.createElement('div')
+let workcontheadpara2= document.createElement("p")
+workcontheadpara2.innerText="Community Relations Manager"
+
+workcontenthead2.append(workcontheadpara2)
+
+
+
+//workpara2
+let workparadiv2 = document.createElement("div")
+
+let workparalist2 =document.createElement("ul")
+workparalist2.setAttribute("style","padding-right:20px")
+
+let wpl12 =document.createElement('li')
+wpl12.innerText = "Lead and execute all phases of event planning and production spanning committee recruitment, training, vendor relationships and on-site facilitation."
+
+let wpl22 =document.createElement('li')
+wpl22.innerText = "Lead and execute all phases of event planning and production spanning committee recruitment, training, vendor relationships and on-site facilitation."
+                     
+let wpl32 =document.createElement('li')
+wpl32.innerText = "Lead and execute all phases of event planning and production spanning committee recruitment, training, vendor relationships and on-site facilitation."
+						
+					
+   workparalist2.append(wpl12,wpl22,wpl32)		
+   workparadiv2.append(workparalist2)		
+
+   workcont2.append(workcontenthead2,workparadiv2)
+
+  
+
+//
+//workiconr2
+
+let workiconr2= document.createElement('div')
+ workiconr2.setAttribute("style","display: flex;")
+
+let workimager2 = document.createElement('img')
+workimager2.setAttribute("src","12.jpg")
+workimager2.setAttribute("style","width:70px;")
+                  
+let workheadingr2 =document.createElement('h2')
+workheadingr2.setAttribute("style","color:#555555;")
+workheadingr2.innerText="Work experience"
+
+workiconr2.append(workimager2,workheadingr2)
+
+
+//workcont3
+
+let workcont3 = document.createElement("div")
+
+//workconthead3
+let workcontenthead3 = document.createElement('div')
+let workcontheadpara3= document.createElement("p")
+workcontheadpara3.innerText="Community Relations Manager"
+
+workcontenthead3.append(workcontheadpara3)
+
+
+
+//workpara3
+let workparadiv3 = document.createElement("div")
+
+let workparalist3 =document.createElement("ul")
+workparalist3.setAttribute("style","padding-right:20px")
+
+let wpl123 =document.createElement('li')
+wpl123.innerText = "Lead and execute all phases of event planning and production spanning committee recruitment, training, vendor relationships and on-site facilitation."
+
+let wpl223 =document.createElement('li')
+wpl223.innerText = "Lead and execute all phases of event planning and production spanning committee recruitment, training, vendor relationships and on-site facilitation."
+                     
+let wpl323 =document.createElement('li')
+wpl323.innerText = "Lead and execute all phases of event planning and production spanning committee recruitment, training, vendor relationships and on-site facilitation."
+						
+					
+   workparalist3.append(wpl123,wpl223,wpl323)		
+   workparadiv3.append(workparalist3)		
+
+   workcont3.append(workcontenthead3,workparadiv3)
+
+
+   rightcolumndiv.append(workiconr1,workcont2,workiconr2,workcont3)
+   lcd1.append(profileicon,profilecont,skillicon,skill,workiconL,workcont)
+leftcolumndiv.append(lcd1);
+margindiv.append(leftcolumndiv,rightcolumndiv)
+container.append(addressdiv,margindiv)
+resume.append(header,container)
+
+
+  
+
+   </script> 
+</body>
+</html>
