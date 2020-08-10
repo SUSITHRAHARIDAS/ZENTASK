@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULATOR</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+   <script>
+       var container1 = document.createElement("div")
+       container1.setAttribute("class","container")
+       container1.setAttribute("style","border:3px solid green;")
+       
+       var heading = document.createElement("h4")
+       heading.setAttribute("style","text-align:center")
+       heading.innerText="CALCULATOR"
+
+       container1.append(heading)
+       document.body.append(container1)
+
+       var container2 = document.createElement("div")
+       container2.setAttribute("class","container")
+       container2.setAttribute("style","border:3px solid green;height:100px")
+
+       var whitespace = document.createElement("input")
+       whitespace.setAttribute("type","text")
+       whitespace.setAttribute("id","dis-space")
+       whitespace.setAttribute("style","float:right;height:90px;border:3px solid white" )
+       container2.append(whitespace)
+
+       var container3 = document.createElement("div")
+       container3.setAttribute("class","container")
+       container3.setAttribute("style","border:3px solid green;height:400px")
+
+       //commonrow
+
+       var commonrow = document.createElement("div")
+       commonrow.setAttribute("class","row")
+     
+       // commoncal 9 & 3
+       var commoncol9 =document.createElement("div")
+       commoncol9.setAttribute("class","col-9")
+       commoncol9.setAttribute("style","background-color:orange;height:390px")
+      
+
+       var commoncol3 =document.createElement("div")
+       commoncol3.setAttribute("class","col-3")
+       commoncol3.setAttribute("style","background-color:orange;height:390px")
+       
+//plus
+       var rowplus = document.createElement("div")
+       rowplus.setAttribute("class","row")
+
+
+      var colplus = document.createElement("div")
+       colplus.setAttribute("class","col-12")
+
+       var addbutton =document.createElement("button")
+       addbutton.setAttribute("style","height:70px;background-color:orange;width:100%;font-size:40px")
+       addbutton.setAttribute("onclick","display('+')")
+       addbutton.innerText="+"
+
+       colplus.append(addbutton)
+       rowplus.append(colplus)
+       commoncol3.append(rowplus)
+//minus
+var rowminus = document.createElement("div")
+       rowminus.setAttribute("class","row")
+
+
+      var colminus = document.createElement("div")
+       colminus.setAttribute("class","col-12")
+       
+       var subbutton =document.createElement("button")
+       subbutton.setAttribute("style","height:70px;background-color:orange;width:100%;font-size:40px")
+       subbutton.setAttribute("onclick","display('-')")
+       subbutton.innerText="-"
+
+       colminus.append(subbutton)
+       rowminus.append(colminus)
+       commoncol3.append(rowminus)
+
+       //mul
+var rowmul= document.createElement("div")
+       rowmul.setAttribute("class","row")
+
+
+      var colmul = document.createElement("div")
+       colmul.setAttribute("class","col-12")
+       
+       var mulbutton =document.createElement("button")
+       mulbutton.setAttribute("style","height:70px;background-color:orange;width:100%;font-size:40px")
+       mulbutton.setAttribute("onclick","display('*')")
+       mulbutton.innerText="*"
+
+       colmul.append(mulbutton)
+
+       rowmul.append(colmul)
+       commoncol3.append(rowmul)
+
+           //div
+var rowdiv= document.createElement("div")
+       rowdiv.setAttribute("class","row")
+
+
+      var coldiv = document.createElement("div")
+       coldiv.setAttribute("class","col-12")
+       
+       var divbutton =document.createElement("button")
+       divbutton.setAttribute("style","height:70px;background-color:orange;width:100%;font-size:40px")
+       divbutton.setAttribute("onclick","display('/')")
+       divbutton.innerText="/"
+
+       coldiv.append(divbutton)
+
+       rowdiv.append(coldiv)
+       commoncol3.append(rowdiv)
+
+       //equal
+       var rowequ= document.createElement("div")
+       rowequ.setAttribute("class","row")
+
+
+      var colequ = document.createElement("div")
+       colequ.setAttribute("class","col-12")
+       
+       var equbutton =document.createElement("button")
+       equbutton.setAttribute("style","height:70px;background-color:orange;width:100%;font-size:40px")
+       equbutton.setAttribute("onclick","result()")
+       equbutton.innerText="="
+
+       colequ.append(equbutton)
+       rowequ.append(colequ)
+       commoncol3.append(rowequ)
+
+       //col9 - row 1
+       var row1= document.createElement("div")
+       row1.setAttribute("class","row")
+
+       var r1col1 = document.createElement("div")
+       r1col1.setAttribute("class","col-4")
+       
+       var r1col1but =document.createElement("button")
+       r1col1but.setAttribute("style","height:70px;background-color:orange;width:100%;font-size:40px")
+       r1col1but.setAttribute("onclick","display(1)")
+       r1col1but.innerText="1"
+
+       r1col1.append(r1col1but)
+
+
+       var r1col2 = document.createElement("div")
+       r1col2.setAttribute("class","col-4")
+       
+       var r1col2but =document.createElement("button")
+       r1col2but.setAttribute("style","height:70px;background-color:orange;width:100%;font-size:40px")
+       r1col2but.setAttribute("onclick","display(2)")
+       r1col2but.innerText="2"
+
+       r1col2.append(r1col2but)
+
+       var r1col3 = document.createElement("div")
+       r1col3.setAttribute("class","col-4")
+       
+       var r1col3but =document.createElement("button")
+       r1col3but.setAttribute("style","height:70px;background-color:orange;width:100%;font-size:40px")
+       r1col3but.setAttribute("onclick","display(3)")
+       r1col3but.innerText="3"
+
+       r1col3.append(r1col3but)
+
+      row1.append(r1col1,r1col2,r1col3)
+      
+      //row 2
+      var row2= document.createElement("div")
+       row2.setAttribute("class","row")
+
+       var r2col1 = document.createElement("div")
+       r2col1.setAttribute("class","col-4")
+       
+       var r2col1but =document.createElement("button")
+       r2col1but.setAttribute("style","height:70px;background-color:orange;width:100%;font-size:40px")
+       r2col1but.setAttribute("onclick","display(4)")
+       r2col1but.innerText="4"
+
+       r2col1.append(r2col1but)
+
+
+       var r2col2 = document.createElement("div")
+       r2col2.setAttribute("class","col-4")
+       
+       var r2col2but =document.createElement("button")
+       r2col2but.setAttribute("style","height:70px;background-color:orange;width:100%;font-size:40px")
+       r2col2but.setAttribute("onclick","display(5)")
+       r2col2but.innerText="5"
+
+       r2col2.append(r2col2but)
+
+       var r2col3 = document.createElement("div")
+       r2col3.setAttribute("class","col-4")
+       
+       var r2col3but =document.createElement("button")
+       r2col3but.setAttribute("style","height:70px;background-color:orange;width:100%;font-size:40px")
+       r2col3but.setAttribute("onclick","display(6)")
+       r2col3but.innerText="6"
+
+       r2col3.append(r2col3but)
+
+      row2.append(r2col1,r2col2,r2col3) 
+
+      //row 3
+
+         var row3= document.createElement("div")
+       row3.setAttribute("class","row")
+
+       var r3col1 = document.createElement("div")
+       r3col1.setAttribute("class","col-4")
+       
+       var r3col1but =document.createElement("button")
+       r3col1but.setAttribute("style","height:70px;background-color:orange;width:100%;font-size:40px")
+       r3col1but.setAttribute("onclick","display(7)")
+       r3col1but.innerText="7"
+
+       r3col1.append(r3col1but)
+
+
+       var r3col2 = document.createElement("div")
+       r3col2.setAttribute("class","col-4")
+       
+       var r3col2but =document.createElement("button")
+       r3col2but.setAttribute("style","height:70px;background-color:orange;width:100%;font-size:40px")
+       r3col2but.setAttribute("onclick","display(8)")
+       r3col2but.innerText="8"
+
+       r3col2.append(r3col2but)
+
+       var r3col3 = document.createElement("div")
+       r3col3.setAttribute("class","col-4")
+       
+       var r3col3but =document.createElement("button")
+       r3col3but.setAttribute("style","height:70px;background-color:orange;width:100%;font-size:40px")
+       r3col3but.setAttribute("onclick","display(9)")
+       r3col3but.innerText="9"
+
+       r3col3.append(r3col3but)
+
+      row3.append(r3col1,r3col2,r3col3) 
+
+//row 4
+
+var row4= document.createElement("div")
+       row4.setAttribute("class","row")
+
+       var r4col1 = document.createElement("div")
+       r4col1.setAttribute("class","col-8")
+       
+       var r4col1but =document.createElement("button")
+       r4col1but.setAttribute("style","height:70px;background-color:orange;width:100%;font-size:40px")
+       r4col1but.setAttribute("onclick","display(0)")
+       r4col1but.innerText="0"
+
+       r4col1.append(r4col1but)
+
+
+       var r4col2 = document.createElement("div")
+       r4col2.setAttribute("class","col-4")
+       
+       var r4col2but =document.createElement("button")
+       r4col2but.setAttribute("style","height:70px;background-color:orange;width:100%;font-size:40px")
+       r4col2but.setAttribute("onclick","display('.')")
+       r4col2but.innerText="."
+
+       r4col2.append(r4col2but)
+   
+         row4.append(r4col1,r4col2) 
+
+//row 5
+var row5= document.createElement("div")
+       row5.setAttribute("class","row")
+
+       var r5col1 = document.createElement("div")
+       r5col1.setAttribute("class","col-12")
+       
+       var r5col1but =document.createElement("button")
+       r5col1but.setAttribute("style","height:70px;background-color:orange;width:100%;font-size:40px")
+       r5col1but.setAttribute("onclick","clr()")
+       r5col1but.innerText="CLEAR"
+
+       r5col1.append(r5col1but)
+       row5.append(r5col1)
+       commoncol9.append(row1,row2,row3,row4,row5)
+       commonrow.append(commoncol9,commoncol3)
+       container3.append(commonrow)
+       document.body.append(container1,container2,container3)
+
+       function display(val){
+    document.getElementById("dis-space").value += val
+}
+
+function clr(){
+       document.getElementById("dis-space").value = ""
+}
+
+function result(){
+    var expression = document.getElementById("dis-space").value 
+    var result = eval(expression)
+    document.getElementById("dis-space").value = result
+}
+
+     
+
+   </script>
+</body>
+</html>
