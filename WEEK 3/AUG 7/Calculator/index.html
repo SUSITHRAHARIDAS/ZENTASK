@@ -27,6 +27,7 @@
        whitespace.setAttribute("type","text")
        whitespace.setAttribute("id","dis-space")
        whitespace.setAttribute("style","float:right;height:90px;border:3px solid white" )
+       whitespace.setAttribute("onkeypress", "onlyNumberKey(data)" )
        container2.append(whitespace)
 
        var container3 = document.createElement("div")
@@ -305,6 +306,13 @@ function result(){
     var expression = document.getElementById("dis-space").value 
     var result = eval(expression)
     document.getElementById("dis-space").value = result
+}
+        function onlyNumberKey(data) { 
+          
+    var ASCIICode = (data.which) ? data.which : data.keyCode 
+    if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57)) 
+        return false; 
+    return true; 
 }
 
      
