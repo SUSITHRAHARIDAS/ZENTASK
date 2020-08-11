@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM-DOM</title>
+    <style>
+ .container,.container2{
+   border:5px solid greenyellow;
+   margin:150px 470px;
+ }
+
+    
+  </style>
+</head>
+<body>
+   
+
+     <script>
+
+       var container=document.createElement('div')
+       container.setAttribute("class","container")
+       container.setAttribute("style","background-color:lightgreen;width:350px")
+
+       var head =document.createElement('h4')
+       head.setAttribute("style","margin-left:100px")
+       head.innerText="FORM-DOM"
+      
+
+      var form = document.createElement('form')
+      //table
+      var tab = document.createElement('table')
+     
+      tab.setAttribute("border",'2')
+      //First Row
+      var firstrow =document.createElement('tr')
+
+      var row1col1 = document.createElement('th')
+      var fname = document.createElement('label')
+      fname.setAttribute("style","float:left")
+      fname.setAttribute("for","fname")
+      fname.innerText = "FIRST NAME"
+
+      row1col1.append(fname)
+
+      var row1col2 = document.createElement('th')
+      var fnameinp = document.createElement('input')
+      fnameinp.setAttribute("type","text")
+      fnameinp.setAttribute("id","fname")
+      fnameinp.setAttribute("name","fname")
+      fnameinp.setAttribute("value","")
+
+      row1col2.append(fnameinp)
+
+     firstrow.append(row1col1,row1col2)
+
+     //Second Row
+
+     var secondrow =document.createElement('tr')
+
+var row2col1 = document.createElement('th')
+var lname = document.createElement('label')
+lname.setAttribute("for","lname")
+lname.setAttribute("style","float:left")
+lname.innerText = "LAST NAME"
+
+row2col1.append(lname)
+
+var row2col2 = document.createElement('th')
+var lnameinp = document.createElement('input')
+lnameinp.setAttribute("type","text")
+lnameinp.setAttribute("id","lname")
+lnameinp.setAttribute("name","lname")
+lnameinp.setAttribute("value","")
+
+row2col2.append(lnameinp)
+
+secondrow.append(row2col1,row2col2)
+
+//THIRD ROW
+
+
+var thirdrow =document.createElement('tr')
+
+var row3col1 = document.createElement('th')
+var address= document.createElement('label')
+address.setAttribute("for","address")
+address.setAttribute("style","float:left")
+address.innerText = "ADDRESS"
+
+row3col1.append(address)
+
+var row3col2 = document.createElement('th')
+
+var addressinp = document.createElement('input')
+addressinp.setAttribute("type","text")
+addressinp.setAttribute("id","address")
+addressinp.setAttribute("name","address")
+addressinp.setAttribute("value","")
+row3col2.append(addressinp)
+
+thirdrow.append(row3col1,row3col2)
+
+//forthrow
+var row4 =document.createElement('tr')
+
+var row4col1 = document.createElement('th')
+var pincode= document.createElement('label')
+pincode.setAttribute("for","pin")
+pincode.setAttribute("style","float:left")
+pincode.innerText = "PINCODE"
+
+row4col1.append(pincode)
+
+var row4col2 = document.createElement('th')
+var pin = document.createElement('input')
+pin.setAttribute("type","text")
+pin.setAttribute("id","pin")
+pin.setAttribute("name","pin")
+pin.setAttribute("value","")
+
+row4col2.append(pin)
+
+row4.append(row4col1,row4col2)
+
+
+//fifthrow
+var row5 =document.createElement('tr')
+
+var row5col1 = document.createElement('th')
+var gen= document.createElement('label')
+gen.setAttribute("for","gen")
+gen.setAttribute("style","float:left")
+gen.innerText = "GENDER"
+
+row5col1.append(gen)
+
+var row5col2 = document.createElement('th')
+var genderm = document.createElement('input')
+genderm.setAttribute("type","text")
+genderm.setAttribute("id","gen")
+genderm.setAttribute("name","gen")
+genderm.setAttribute("value","")
+genderm.innerText="male"
+
+
+
+
+row5col2.append(genderm)
+
+row5.append(row5col1,row5col2)
+
+//sixthrow
+var row6 =document.createElement('tr')
+
+var row6col1 = document.createElement('th')
+var fopt= document.createElement('label')
+fopt.setAttribute("for","fopt")
+fopt.setAttribute("style","float:left")
+fopt.innerText = "CHOICE OF FOOD"
+
+row6col1.append(fopt)
+
+var row6col2 = document.createElement('th')
+var fchoices= document.createElement('select')
+fchoices.setAttribute("id","fopt")
+fchoices.setAttribute("name","food")
+fchoices.setAttribute("multiple",true)
+
+
+
+var bf = document.createElement('option')
+bf.setAttribute("value","bf")
+bf.innerText="BreakFast"
+
+var lunch = document.createElement('option')
+lunch.setAttribute("value","lunch")
+lunch.innerText="Lunch"
+
+var dinner = document.createElement('option')
+dinner.setAttribute("value","dinner")
+dinner.innerText="Dinner"
+
+var snacks = document.createElement('option')
+snacks.setAttribute("value","snacks")
+snacks.innerText="Snacks"
+
+var Buffet = document.createElement('option')
+Buffet.setAttribute("value","Buffet")
+Buffet.innerText="Buffet"
+
+fchoices.append(bf,lunch,dinner,snacks,Buffet)
+row6col2.append(fchoices)
+
+row6.append(row6col1,row6col2)
+
+//seventhrow
+
+var row7 =document.createElement('tr')
+
+var row7col1 = document.createElement('th')
+var state= document.createElement('label')
+state.setAttribute("for","state")
+state.setAttribute("style","float:left")
+state.innerText = "STATE"
+
+var row7col2 = document.createElement('th')
+var stateinp= document.createElement('select')
+stateinp.setAttribute("id","state")
+stateinp.setAttribute("name","state")
+
+
+var TamilNadu = document.createElement('option')
+TamilNadu.setAttribute("value","TN")
+TamilNadu.innerText="TamilNadu"
+
+
+var Kerala = document.createElement('option')
+Kerala.setAttribute("value","KL")
+Kerala.innerText="KeraLa"
+
+
+var Karnataka = document.createElement('option')
+Karnataka.setAttribute("value","KN")
+Karnataka.innerText="KarNataka"
+
+stateinp.append(TamilNadu,Kerala,Karnataka)
+row7col2.append(stateinp)
+row7col1.append(state)
+row7.append(row7col1,row7col2)
+
+//row 8
+ 
+ var row8 =document.createElement('tr')
+
+var row8col1 = document.createElement('th')
+var cname = document.createElement('label')
+cname.setAttribute("style","float:left")
+cname.setAttribute("for","cname")
+cname.innerText = "COUNTRY NAME"
+
+row8col1.append(cname)
+
+var row8col2 = document.createElement('th')
+var cnameinp = document.createElement('input')
+cnameinp.setAttribute("type","text")
+cnameinp.setAttribute("id","fname")
+cnameinp.setAttribute("name","fname")
+cnameinp.setAttribute("value","")
+
+row8col2.append(cnameinp)
+
+row8.append(row8col1,row8col2)
+
+
+//row 9
+
+var row9 =document.createElement('tr')
+var row9col1 = document.createElement('th')
+var sub = document.createElement('button')
+sub.setAttribute("colspan","2")
+sub.setAttribute("onclick","getdata()")
+sub.innerText="SUBMIT"
+
+row9col1.append(sub);
+row9.append(row9col1)
+
+
+//table2
+
+var container2 =document.createElement('div');
+container2.setAttribute("class","container2")
+container.setAttribute("style","background-color:lightgreen;width:350px")
+
+var tab2 = document.createElement('table')
+tab2.setAttribute("border","2")
+tab2.setAttribute('id','list')
+
+var row  = document.createElement('tr')
+var col1 = document.createElement('th')
+col1.innerHTML="FirstName"
+var col2 = document.createElement('th')
+col2.innerHTML="LastName"
+var tabbody =document.createElement('tbody')
+row.append(col1,col2)
+tab2.append(row,tabbody)
+container2.append(tab2)
+
+
+      tab.append(firstrow,secondrow,thirdrow,row4,row5,row6,row7,row8,row9)
+      form.append(tab)
+      container.append(head,form)
+      document.body.append(container,container2)
+
+
+    function getdata(){
+   
+
+    var FirstName =document.getElementById('fname').value;
+    var LastName = document.getElementById('lname').value;
+    var Address = document.getElementById('address').value;
+    var pincode = document.getElementById('pin').value;
+   
+
+    let data = [{'First Name': fname}, {'Last Name':lname},{'Address': address},{'PinCode': pin}];
+    localStorage.setItem('data', JSON.stringify(data))}
+
+
+         </script>
+
+
+    
+</body>
+</html>
