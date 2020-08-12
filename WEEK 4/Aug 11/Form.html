@@ -300,6 +300,11 @@ container2.append(tab2)
     var LastName = document.getElementById('lname').value;
     var Address = document.getElementById('address').value;
     var pincode = document.getElementById('pin').value;
+    var Gender = document.getElementById('gen').value;
+    var Country = document.getElementById('cname').value;
+    var FoodOpt = [...fchoices.selectedOptions].map((opt)=>opt.value);
+    var indstate = [...stateinp.selectedOptions].map((opt)=>opt.value)
+console.log(FirstName,LastName,Address,pincode,Gender,Country,FoodOpt,indstate)
    
 
     let data = [{'First Name': fname}, {'Last Name':lname},{'Address': address},{'PinCode': pin}];
