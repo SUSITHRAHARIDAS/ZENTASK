@@ -1,0 +1,65 @@
+/*var outerline  = document.createElement('div')
+outerline.setAttribute("style","background-color:Khaki;")
+outerline.className=("container")*/
+
+
+var heading = document.createElement('h1')
+heading.setAttribute("class","head")
+heading.innerText = "PAGINATION TASK"
+
+
+var datatab =document.createElement('table')
+datatab.className=("datatable")
+var dtheader = document.createElement('thead')
+var dtheaderrow = document.createElement('tr')
+var dth1 =document.createElement('th')
+dth1.innertext ="ID"
+var dth2 =document.createElement('th')
+dth2.innertext ="NAME"
+var dth3 =document.createElement('th')
+dth3.innertext ="EMAIL"
+var dtbody = document.createElement('tbody')
+dtheaderrow.append(dth1,dth2,dth3)
+dtheader.append(dtheaderrow)
+datatab.append(dtheader,dtbody)
+
+var pagetable = document.createElement('div')
+var paginationdiv = document.createElement('div')
+paginationdiv.setAttribute("id","wrapper")
+
+pagetable.append(paginationdiv)
+
+
+//var datadetail =document.getElementById(datatable)
+//var pagedetail =document.getElementById(pagetable)
+
+
+var state = {
+    'querySet': data,
+
+    'page': 1,
+    'rows': 5,
+    'window': 5,
+}
+
+
+
+function pagination(querySet, page, rows) {
+
+    var trimStart = (page - 1) * rows
+    var trimEnd = trimStart + rows
+
+    var trimmedData = querySet.slice(trimStart, trimEnd)
+
+    var pages = Math.round(querySet.length / rows);
+
+    return {
+        'querySet': trimmedData,
+        'pages': pages,
+    }
+}
+
+
+
+
+document.body.append(heading,datatab,pagetable)
